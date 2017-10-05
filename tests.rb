@@ -23,4 +23,12 @@ describe 'number_summary' do
         end
     end
 
+    describe 'standard_deviation' do
+        it 'finds the standard deviation' do
+            standard_deviation([6, 2, 3, 1]).round(2).must_equal(1.87)
+            standard_deviation([1,1,1,1,1,1,1,1]).round(2).must_equal(0)
+            standard_deviation([9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4]).round(2).must_equal(2.98)
+        end
+    end
+
 end

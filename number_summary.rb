@@ -4,7 +4,8 @@ def mean(list)
     return total.to_f / list.length
 end
 
-def median(list)
+def median(arr)
+    list = arr.sort()
     if list.length % 2 == 1
         return list[list.length / 2]
     else
