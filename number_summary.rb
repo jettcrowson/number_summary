@@ -32,3 +32,23 @@ def mode(list)
 
     return most_occurences
 end
+
+def longest_run(list)
+    longest = 0
+    temp = 0
+    previous = -999999999999999999999999999999999999
+
+    list.each do |num|
+        if num > previous
+            temp+=1
+        else
+            if temp > longest
+                longest = temp
+            end
+            temp = 1
+        end
+        previous = num
+    end
+
+    return longest > temp ? longest : temp
+end 

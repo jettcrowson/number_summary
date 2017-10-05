@@ -44,7 +44,9 @@ describe 'number_summary' do
         it 'finds the longest set of increasing numbers in an array' do
             longest_run([1,4,2,5,3,4,7,8,4,5,6,8,9,3,-1,3]).must_equal(5)
             longest_run([1,2,3,4,5]).must_equal(5)
+            longest_run([1]).must_equal(1)
             longest_run([5,4,3,2,1]).must_equal(1)
+            longest_run([5,4,3,2,1,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,2,4,2,1]).must_equal(9)
         end
     end
 
