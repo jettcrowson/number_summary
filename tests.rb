@@ -11,6 +11,7 @@ describe 'number_summary' do
         it 'returns the mean' do
             mean([1,2,3,4,5]).must_equal(3)
             mean([1,2,3,4]).must_equal(2.5)
+            mean([1]).must_equal(1)
         end
     end
 
@@ -18,6 +19,7 @@ describe 'number_summary' do
         it 'finds the middle number' do
             median([1,3,7]).must_equal(3)
             median([1,2,3,4]).must_equal(2.5)
+            median([1]).must_equal(1)
         end
     end
 
