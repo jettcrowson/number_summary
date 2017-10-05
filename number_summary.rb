@@ -12,3 +12,10 @@ def median(arr)
         return mean([list[list.length / 2 - 1], list[list.length / 2]])
     end
 end
+
+def standard_deviation(list)
+    average = mean(list)
+    squared = []
+    list.each { |num| squared.push((num - average) ** 2) }
+    return Math.sqrt(mean(squared))
+end
