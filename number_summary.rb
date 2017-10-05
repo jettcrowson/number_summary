@@ -19,3 +19,16 @@ def standard_deviation(list)
     list.each { |num| squared.push((num - average) ** 2) }
     return Math.sqrt(mean(squared))
 end
+
+def mode(list)
+    most_occurences = [list[0]]
+    list.each do |num| 
+        if list.count(num) > list.count(most_occurences[0])
+            most_occurences = [num]
+        elsif list.count(num) == list.count(most_occurences[0])
+            most_occurences.push(num)
+        end
+    end
+
+    return most_occurences
+end
