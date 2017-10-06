@@ -26,7 +26,7 @@ def mode(list)
         if list.count(num) > list.count(most_occurences[0])
             most_occurences = [num]
         elsif list.count(num) == list.count(most_occurences[0])
-            most_occurences.push(num)
+            if !most_occurences.include?(num) then most_occurences.push(num) end
         end
     end
 

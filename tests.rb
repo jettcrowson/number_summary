@@ -19,6 +19,7 @@ describe 'number_summary' do
         it 'finds the middle number' do
             median([1,3,7]).must_equal(3)
             median([1,2,3,4]).must_equal(2.5)
+            median([6,2,4,1,3,5]).must_equal(3.5)
             median([1]).must_equal(1)
         end
     end
